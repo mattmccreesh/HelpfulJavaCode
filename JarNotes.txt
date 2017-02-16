@@ -1,0 +1,8 @@
+A jar file is essentially a clickable executable for java.  You can move that file to your desktop by yourself and it will run by double clicking.  It will not spawn a UI unless specifically programmed to, and as it is not run from command line it can't take command line args or print to command line (unless you provide a UI).
+
+Steps for making a jar:
+1) compile the java code (javac *.java)
+2) make a file manifest.txt with one line followed by newline: Main-Class: MyMainClass
+	from command line this is echo Main-Class: MyMainClass >manifest.txt
+3)C:\mywork> jar cvfm Name.jar manifest.txt *.class
+Now you have a jar you can execute form command line with java -jar Name.jar or just double click to run
